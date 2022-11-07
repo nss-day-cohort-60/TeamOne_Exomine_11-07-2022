@@ -22,13 +22,3 @@ export const Governors = () => {
 
     html += "</select>"
 }
-
-document.addEventListener(
-    "change",
-    (changeEvent) => {
-        if (changeEvent.target.id === "governors") {
-            setGovernors(pasrseInt(changeEvent.target.value))
-        }
-    }
-
-)
