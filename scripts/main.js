@@ -13,7 +13,7 @@ const render = () => {
         .then(() => getData.fetchOrders)
         .then( 
             () => {
-                mainContainer.innerHTML = exomine.js();
+                //mainContainer.innerHTML = exomine.js();
             }
         )
 }

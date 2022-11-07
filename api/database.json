@@ -121,40 +121,50 @@
     "facilityMinerals":[{
         "id":1,
         "colonyId":1,
-        "mineralId":4
+        "mineralId":4,
+        "inventory": 5
     },{
         "id":2,
         "colonyId":1,
-        "mineralId":3
+        "mineralId":3,
+        "inventory":3
     },{
         "id":3,
         "colonyId":1,
-        "mineralId":1
+        "mineralId":1,
+        "inventory":5
     },{
         "id":4,
         "colonyId":2,
-        "mineralId":2
+        "mineralId":2,
+        "inventory":3
     },{
         "id":5,
         "colonyId":3,
-        "mineralId":3
+        "mineralId":3,
+        "inventory":5
     },{
         "id":6,
         "colonyId":3,
-        "mineralId":5
+        "mineralId":5,
+        "inventory":7
     },{
         "id":7,
         "colonyId":4,
-        "mineralId":2
+        "mineralId":2,
+        "inventory":5
     },{
         "id":8,
         "colonyId":4,
-        "mineralId":5
+        "mineralId":5,
+        "inventory":3
     },{
         "id":9,
         "colonyId":4,
-        "mineralId":6
+        "mineralId":6,
+        "inventory":5
     }],
-    "orders":[]
+    "orders":[],
+    "colonyInventory":[]
 }
 
