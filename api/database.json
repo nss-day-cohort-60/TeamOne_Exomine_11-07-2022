@@ -78,25 +78,21 @@
         "id":1,
         "name":"Smith Garage",
         "colonyId": 1,
-        "facilityMineralId":1,
         "active":true
     },{
         "id":2,
         "name":"Planet Trade Center",
         "colonyId": 2,
-        "facilityMineralId":2,
         "active":true
     },{
         "id":3,
         "name":"The Citadel of Ricks",
         "colonyId": 3,
-        "facilityMineralId":3,
         "active":false
     },{
         "id":4,
         "name":"The Lookout",
         "colonyId": 4,
-        "facilityMineralId":4,
         "active":true
     }],
     "minerals":[{
@@ -120,47 +116,47 @@
     }],
     "facilityMinerals":[{
         "id":1,
-        "colonyId":1,
+        "facilityId":2,
         "mineralId":4,
         "inventory": 5
     },{
         "id":2,
-        "colonyId":1,
+        "facilityId":1,
         "mineralId":3,
         "inventory":3
     },{
         "id":3,
-        "colonyId":1,
+        "facilityId":1,
         "mineralId":1,
         "inventory":5
     },{
         "id":4,
-        "colonyId":2,
+        "facilityId":2,
         "mineralId":2,
         "inventory":3
     },{
         "id":5,
-        "colonyId":3,
+        "facilityId":3,
         "mineralId":3,
         "inventory":5
     },{
         "id":6,
-        "colonyId":3,
+        "facilityId":3,
         "mineralId":5,
         "inventory":7
     },{
         "id":7,
-        "colonyId":4,
+        "facilityId":4,
         "mineralId":2,
         "inventory":5
     },{
         "id":8,
-        "colonyId":4,
+        "facilityId":4,
         "mineralId":5,
         "inventory":3
     },{
         "id":9,
-        "colonyId":4,
+        "facilityId":4,
         "mineralId":6,
         "inventory":5
     }],
