@@ -1,5 +1,6 @@
 import {Governors} from "./governors.js"
 import {renderColony} from "./colonies.js"
+import {facilityMinerals} from "./facilityMinerals.js"
 
 export const Exomine = () => {
     let html =  `

@@ -1,6 +1,8 @@
 //import colonies for local access
 import { getColonies } from "./database.js";
 
+let governorId = null
+
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("change",
@@ -15,11 +17,7 @@ export const renderColony = (governorId) => {
 //json database -> local variable
 const colonies = getColonies()
 
-<<<<<<< HEAD
-html+=`${colonies.find(
-=======
 let html = `${colonies.find(
->>>>>>> main
     (colony) =>{
         return colony.governorId===governorId
     }

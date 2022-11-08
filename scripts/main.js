@@ -1,9 +1,5 @@
 import * as getData from "./database.js"
-<<<<<<< HEAD
-import { exomine } from "./exomine.js"
-=======
 import { Exomine } from "./exomine.js"
->>>>>>> main
 
 const mainContainer = document.querySelector("#container")
 
@@ -17,11 +13,7 @@ export const render = () => {
         .then(() => getData.fetchOrders())
         .then( 
             () => {
-<<<<<<< HEAD
-                mainContainer.innerHTML = exomine();
-=======
                 mainContainer.innerHTML = Exomine();
->>>>>>> main
             }
         )
 }
