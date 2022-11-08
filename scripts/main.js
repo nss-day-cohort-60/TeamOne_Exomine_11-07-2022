@@ -1,9 +1,13 @@
 import * as getData from "./database.js"
+<<<<<<< HEAD
+import { exomine } from "./exomine.js"
+=======
 import { Exomine } from "./exomine.js"
+>>>>>>> main
 
 const mainContainer = document.querySelector("#container")
 
-const render = () => {
+export const render = () => {
     getData.fetchGovernors()
         .then(() => getData.fetchFacilities())
         .then(() => getData.fetchColonyGovernors())
@@ -13,7 +17,11 @@ const render = () => {
         .then(() => getData.fetchOrders())
         .then( 
             () => {
+<<<<<<< HEAD
+                mainContainer.innerHTML = exomine();
+=======
                 mainContainer.innerHTML = Exomine();
+>>>>>>> main
             }
         )
 }
