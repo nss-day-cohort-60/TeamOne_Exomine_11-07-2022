@@ -1,31 +1,24 @@
 //import colonies for local access
 import { getColonies, getColonyGovernors } from "./database.js";
 import {render} from "./main.js"
+//import {disableFacilities} from "./governors.js"
 
 let governorId = null
-<<<<<<< HEAD
 
-const mainContainer = document.querySelector("#container")
-=======
->>>>>>> main
 
 document.addEventListener("change",
     (event) => {
         if (event.target.id === "governor") {
             governorId = parseInt(event.target.value)
             render()
+            disableFacilities()
         } 
     }) 
 
 
-export const renderColony = () => {
-//json database -> local variable
 
-<<<<<<< HEAD
-let html = `${colonies.find(
-    (colony) =>{
-        return colony.governorId===governorId
-=======
+export const renderColony = () => {
+
 
 if (governorId) {
     const colonyGovernors = getColonyGovernors()
@@ -40,7 +33,6 @@ if (governorId) {
                 colonyObj = colony
             }
         }
->>>>>>> main
     }
    }
 
@@ -51,3 +43,14 @@ if (governorId) {
 }
 }
 
+export const disableFacilities=()=>{
+    if(governorId){
+        
+    }    
+    /*if(governorId){
+        document.getElementById('facilities').disabled = true
+    }
+   else {
+        document.getElementById('facilities').disabled = true
+    }*/
+}
