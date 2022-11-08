@@ -7,6 +7,16 @@ Need setGovernors() function
 
 import { getGovernors } from "./database.js"
 
+let governorId = null
+
+document.addEventListener("change",
+    (event) => {
+        if (event.target.id === "governor") {
+            governorId = parseInt(event.target.value)
+            
+        } 
+    }) 
+
 export const Governors = () => {
     let governors = getGovernors()
 
