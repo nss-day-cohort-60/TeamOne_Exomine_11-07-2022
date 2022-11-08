@@ -50,7 +50,7 @@ export const facilityMinerals = (facilityId) => {
         }
 
     return `<h2>Facility Minerals for ${facilityName}</h2>
-            ${availableMinerals.map(obj => {
+            ${displayInfo.availableMinerals.map(obj => {
                 return `<input type="radio">${obj.mineralInventory} tons of ${obj.mineralName}`
             })}
     `

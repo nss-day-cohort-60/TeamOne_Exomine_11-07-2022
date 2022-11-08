@@ -20,9 +20,7 @@ export const fetchGovernors = () => {
 }
 
 export const getGovernors = () => {
-    let data = applicationState.governors.map(gov => ({...gov}))
-    console.log(data)
-    return data
+    return applicationState.governors.map(gov => ({...gov}))
 }
 
 export const fetchColonies = () => {

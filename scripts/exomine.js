@@ -1,12 +1,13 @@
 import {Governors} from "./governors.js"
 import {renderColony} from "./colonies.js"
+import { facilityMinerals } from "./facilityMinerals.js"
 
 export const Exomine = () => {
     let html =  `
     <div class="governorColonies">
         <h1>Solar System Mining Marketplace</h1>
             <section class="governors">
-            ${Governors()}
+                ${Governors()}
             </section>
             <section class="colonies">
             ${renderColony()}
