@@ -6,10 +6,11 @@ Need setGovernors() function
 //import set governor
 import { getGovernors } from "./database.js"
 
-let governors = getGovernors()
+
 
 
 export const Governors = () => {
+    let governors = getGovernors()
     let html = "<p>Choose a governor</p>"
 
     html += '<select id="governors">'
