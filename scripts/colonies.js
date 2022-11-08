@@ -5,7 +5,7 @@ export const renderColony = (governor) => {
 //json database -> local variable
 const colonies = getColonies()
 
-html=+`${colonies.find(
+let html = `${colonies.find(
     (colony) =>{
         return colony.governorId===governor.id
     }
