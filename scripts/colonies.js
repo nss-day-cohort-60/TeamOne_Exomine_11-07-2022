@@ -5,20 +5,15 @@ import {render} from "./main.js"
 
 let governorId = null
 
-
 document.addEventListener("change",
     (event) => {
         if (event.target.id === "governor") {
             governorId = parseInt(event.target.value)
             render()
-            disableFacilities()
         } 
     }) 
 
-
-
 export const renderColony = () => {
-
 
 if (governorId) {
     const colonyGovernors = getColonyGovernors()
@@ -41,16 +36,4 @@ if (governorId) {
 } else {
     return "<h2>Colony Minerals</h2>"
 }
-}
-
-export const disableFacilities=()=>{
-    if(governorId){
-        
-    }    
-    /*if(governorId){
-        document.getElementById('facilities').disabled = true
-    }
-   else {
-        document.getElementById('facilities').disabled = true
-    }*/
 }
