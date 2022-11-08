@@ -1,30 +1,42 @@
 //import colonies for local access
-import { getColonies } from "./database.js";
+import { getColonies, getColonyGovernors } from "./database.js";
+import {render} from "./main.js"
 
-const mainContainer = document.querySelector("#container")
+let governorId = null
 
-mainContainer.addEventListener("change",
+document.addEventListener("change",
     (event) => {
-        if (event.target.id === "governors") {
+        if (event.target.id === "governor") {
             governorId = parseInt(event.target.value)
+            render()
         } 
     }) 
 
 
-export const renderColony = (governorId) => {
+export const renderColony = () => {
 //json database -> local variable
-const colonies = getColonies()
 
-<<<<<<< HEAD
-html+=`${colonies.find(
-=======
-let html = `${colonies.find(
->>>>>>> main
-    (colony) =>{
-        return colony.governorId===governorId
+
+if (governorId) {
+    const colonyGovernors = getColonyGovernors()
+    const colonies = getColonies()
+
+    let colonyObj = null
+
+   for (const obj of colonyGovernors) {
+    if (obj.governorId === governorId) {
+        for (const colony of colonies) {
+            if (colony.id === obj.colonyId) {
+                colonyObj = colony
+            }
+        }
     }
-)}`
+   }
 
-html+="'s Orders</h2>"
+    const html = `<h2>${colonyObj.name}'s Orders</h2>`
+    return html
+} else {
+    return "<h2>Colony Minerals</h2>"
+}
 }
 
