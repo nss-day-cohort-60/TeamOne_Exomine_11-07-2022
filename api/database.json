@@ -38,7 +38,7 @@
     },{
         "id":2,
         "name": "Planet Vegeta",
-        "governorId":1,
+        "governorId":3,
         "facilityId":2
     },{
         "id":3,

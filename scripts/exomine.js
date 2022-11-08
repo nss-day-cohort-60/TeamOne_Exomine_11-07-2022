@@ -1,6 +1,7 @@
 import {Governors} from "./governors.js"
 import {renderColony} from "./colonies.js"
 import { facilityMinerals } from "./facilityMinerals.js"
+import { Facilities } from "./facilities.js"
 
 export const Exomine = () => {
     let html =  `
@@ -19,7 +20,7 @@ export const Exomine = () => {
 
     <div class="shop">
     <section class="facilityDropdown">
-
+    ${Facilities()}
     </section>
     <section class="facilityMinerals">
     ${facilityMinerals()}
