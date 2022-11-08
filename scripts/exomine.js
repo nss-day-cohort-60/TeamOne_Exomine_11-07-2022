@@ -2,7 +2,7 @@ import {Governors} from "./governors.js"
 import {renderColony} from "./colonies.js"
 
 export const Exomine = () => {
-    return `
+    let html =  `
     <div class="governorColonies">
         <h1>Solar System Mining Marketplace</h1>
             <section class="governors">
@@ -21,11 +21,12 @@ export const Exomine = () => {
 
     </section>
     <section class="facilityMinerals">
-
+    ${facilityMinerals()}
     </section>
     <section class="Space Cart">
             <button id="orderButton">Add to Space Cart</button>
     </section>
     </div>
     `
+    return html
 }
