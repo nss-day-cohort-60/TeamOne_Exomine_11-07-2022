@@ -1,5 +1,5 @@
 import {Governors} from "./governors.js"
-import {renderColonies} from "./colonies.js"
+import {renderColony} from "./colonies.js"
 
 export const Exomine = () => {
     return `
@@ -9,7 +9,7 @@ export const Exomine = () => {
             ${Governors()}
             </section>
             <section class="colonies">
-            ${renderColonies()}
+            ${renderColony()}
             </section>
             <section class="colonyInventory">
 
