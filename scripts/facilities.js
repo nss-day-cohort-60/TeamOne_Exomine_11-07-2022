@@ -14,7 +14,6 @@ document.addEventListener("change",
 
 
 export const Facilities = () => {
-    console.log("jsfhgbvlkijhb")
     let facilities = getFacilities()
 
     let html = "<div>Choose a facility</div>"

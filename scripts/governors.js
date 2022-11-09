@@ -13,7 +13,6 @@ document.addEventListener("change",
     (event) => {
         if (event.target.id === "governor") {
             governorId = parseInt(event.target.value)
-            
         } 
     }) 
 
