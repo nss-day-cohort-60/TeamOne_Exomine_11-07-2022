@@ -1,166 +1,252 @@
 {
-"governors":[{
-        "id":1,
-        "name":"Morty Smith",
-        "colonyId":1,
-        "active": true
+  "governors": [
+    {
+      "id": 1,
+      "name": "Morty Smith",
+      "colonyId": 1,
+      "active": true
     },
     {
-        "id":2,
-        "name":"Professor Poopybutthole",
-        "colonyId":3,
-        "active": true
+      "id": 2,
+      "name": "Professor Poopybutthole",
+      "colonyId": 3,
+      "active": true
     },
     {
-        "id":3,
-        "name":"Prince Vegeta",
-        "colonyId":2,
-        "active": true
+      "id": 3,
+      "name": "Prince Vegeta",
+      "colonyId": 2,
+      "active": true
     },
     {
-        "id":4,
-        "name":"Piccolo",
-        "colonyId":4,
-        "active": false
+      "id": 4,
+      "name": "Piccolo",
+      "colonyId": 4,
+      "active": false
     },
     {
-        "id":5,
-        "name":"Son Goku",
-        "colonyId":2,
-        "active": true
-    }],
-
-    "colonies":[{
-        "id":1,
-        "name": "Earth",
-        "governorId":1,
-        "facilityId":1
-    },{
-        "id":2,
-        "name": "Planet Vegeta",
-        "governorId":3,
-        "facilityId":2
-    },{
-        "id":3,
-        "name": "Planet Poopybutthole",
-        "governorId":2,
-        "facilityId":3
-    },{
-        "id":4,
-        "name": "Namek",
-        "governorId":4,
-        "facilityId":4
-    }],
-
-    "colonyGovernors":[{
-        "id":1,
-        "colonyId":1,
-        "governorId":1
-    },{
-        "id":2,
-        "colonyId": 2,
-        "governorId":3
-    },{
-        "id":3,
-        "colonyId": 2,
-        "governorId":5
-    },{
-        "id":4,
-        "colonyId": 3,
-        "governorId":2
-    },{
-        "id":5,
-        "colonyId": 4,
-        "governorId":4
-    }],
-
-    "facilities":[{
-        "id":1,
-        "name":"Smith Garage",
-        "colonyId": 1,
-        "active":true
-    },{
-        "id":2,
-        "name":"Planet Trade Center",
-        "colonyId": 2,
-        "active":true
-    },{
-        "id":3,
-        "name":"The Citadel of Ricks",
-        "colonyId": 3,
-        "active":false
-    },{
-        "id":4,
-        "name":"The Lookout",
-        "colonyId": 4,
-        "active":true
-    }],
-    "minerals":[{
-        "id":1,
-        "name": "uranium"
-    },{
-        "id":2,
-        "name": "freizite"
-    },{
-        "id":3,
-        "name": "rickium"
-    },{
-        "id":4,
-        "name": "dragonite"
-    },{
-        "id":5,
-        "name": "crystalized xanthenite"
-    },{
-        "id":6,
-        "name": "namekium"
-    }],
-    "facilityMinerals":[{
-        "id":1,
-        "facilityId":2,
-        "mineralId":4,
-        "inventory": 5
-    },{
-        "id":2,
-        "facilityId":1,
-        "mineralId":3,
-        "inventory":3
-    },{
-        "id":3,
-        "facilityId":1,
-        "mineralId":1,
-        "inventory":5
-    },{
-        "id":4,
-        "facilityId":2,
-        "mineralId":2,
-        "inventory":3
-    },{
-        "id":5,
-        "facilityId":3,
-        "mineralId":3,
-        "inventory":5
-    },{
-        "id":6,
-        "facilityId":3,
-        "mineralId":5,
-        "inventory":7
-    },{
-        "id":7,
-        "facilityId":4,
-        "mineralId":2,
-        "inventory":5
-    },{
-        "id":8,
-        "facilityId":4,
-        "mineralId":5,
-        "inventory":3
-    },{
-        "id":9,
-        "facilityId":4,
-        "mineralId":6,
-        "inventory":5
-    }],
-    "orders":[],
-    "colonyInventory":[]
+      "id": 5,
+      "name": "Son Goku",
+      "colonyId": 2,
+      "active": true
+    }
+  ],
+  "colonies": [
+    {
+      "id": 1,
+      "name": "Earth",
+      "governorId": 1,
+      "facilityId": 1
+    },
+    {
+      "id": 2,
+      "name": "Planet Vegeta",
+      "governorId": 3,
+      "facilityId": 2
+    },
+    {
+      "id": 3,
+      "name": "Planet Poopybutthole",
+      "governorId": 2,
+      "facilityId": 3
+    },
+    {
+      "id": 4,
+      "name": "Namek",
+      "governorId": 4,
+      "facilityId": 4
+    }
+  ],
+  "colonyGovernors": [
+    {
+      "id": 1,
+      "colonyId": 1,
+      "governorId": 1
+    },
+    {
+      "id": 2,
+      "colonyId": 2,
+      "governorId": 3
+    },
+    {
+      "id": 3,
+      "colonyId": 2,
+      "governorId": 5
+    },
+    {
+      "id": 4,
+      "colonyId": 3,
+      "governorId": 2
+    },
+    {
+      "id": 5,
+      "colonyId": 4,
+      "governorId": 4
+    }
+  ],
+  "facilities": [
+    {
+      "id": 1,
+      "name": "Smith Garage",
+      "colonyId": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Planet Trade Center",
+      "colonyId": 2,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "The Citadel of Ricks",
+      "colonyId": 3,
+      "active": false
+    },
+    {
+      "id": 4,
+      "name": "The Lookout",
+      "colonyId": 4,
+      "active": true
+    }
+  ],
+  "minerals": [
+    {
+      "id": 1,
+      "name": "uranium"
+    },
+    {
+      "id": 2,
+      "name": "freizite"
+    },
+    {
+      "id": 3,
+      "name": "rickium"
+    },
+    {
+      "id": 4,
+      "name": "dragonite"
+    },
+    {
+      "id": 5,
+      "name": "crystalized xanthenite"
+    },
+    {
+      "id": 6,
+      "name": "namekium"
+    }
+  ],
+  "facilityMinerals": [
+    {
+      "id": 1,
+      "facilityId": 2,
+      "mineralId": 4,
+      "inventory": 5
+    },
+    {
+      "id": 2,
+      "facilityId": 1,
+      "mineralId": 3,
+      "inventory": 3
+    },
+    {
+      "id": 3,
+      "facilityId": 1,
+      "mineralId": 1,
+      "inventory": 5
+    },
+    {
+      "id": 4,
+      "facilityId": 2,
+      "mineralId": 2,
+      "inventory": 3
+    },
+    {
+      "id": 5,
+      "facilityId": 3,
+      "mineralId": 3,
+      "inventory": 5
+    },
+    {
+      "id": 6,
+      "facilityId": 3,
+      "mineralId": 5,
+      "inventory": 7
+    },
+    {
+      "id": 7,
+      "facilityId": 4,
+      "mineralId": 2,
+      "inventory": 5
+    },
+    {
+      "id": 8,
+      "facilityId": 4,
+      "mineralId": 5,
+      "inventory": 3
+    },
+    {
+      "id": 9,
+      "facilityId": 4,
+      "mineralId": 6,
+      "inventory": 5
+    }
+  ],
+  "orders": [
+    {
+      "receivingColony": "Earth",
+      "dispatchingFacility": "Smith Garage",
+      "mineralOrdered": "rickium",
+      "id": 1
+    },
+    {
+      "receivingColony": "Earth",
+      "dispatchingFacility": "Planet Trade Center",
+      "mineralOrdered": "dragonite",
+      "id": 2
+    },
+    {
+      "receivingColony": "Planet Poopybutthole",
+      "dispatchingFacility": "Smith Garage",
+      "mineralOrdered": "rickium",
+      "id": 3
+    },
+    {
+      "receivingColony": "Planet Poopybutthole",
+      "dispatchingFacility": "Smith Garage",
+      "mineralOrdered": "rickium",
+      "id": 4
+    },
+    {
+      "receivingColony": "Planet Vegeta",
+      "dispatchingFacility": "Smith Garage",
+      "mineralOrdered": "rickium",
+      "id": 5
+    },
+    {
+      "receivingColony": "Planet Vegeta",
+      "dispatchingFacility": "Planet Trade Center",
+      "mineralOrdered": "dragonite",
+      "id": 6
+    },
+    {
+      "receivingColony": "Earth",
+      "dispatchingFacility": "Planet Trade Center",
+      "mineralOrdered": {
+        "0": {},
+        "1": {}
+      },
+      "id": 7
+    },
+    {
+      "receivingColony": "Earth",
+      "dispatchingFacility": "Planet Trade Center",
+      "mineralOrdered": {
+        "0": {},
+        "1": {}
+      },
+      "id": 8
+    }
+  ],
+  "colonyInventory": []
 }
-

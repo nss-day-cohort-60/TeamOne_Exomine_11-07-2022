@@ -11,6 +11,7 @@ mainContainer.addEventListener("change",
             facilityId = parseInt(event.target.value)
             facilityMinerals()
             render()
+            console.log("rendered in facilityMinerals")
         } 
     }) 
 
@@ -52,7 +53,7 @@ export const facilityMinerals = () => {
 
         let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>
         ${displayInfo.availableMinerals.map(obj => {
-            return `<input type="radio">${obj.mineralInventory} tons of ${obj.mineralName}</input>`
+            return `<input type="radio" name="mineral" value='${obj.mineralName}' id="mineral"}>${obj.mineralInventory} tons of ${obj.mineralName}</input>`
         })}`
 
         console.log(html)
