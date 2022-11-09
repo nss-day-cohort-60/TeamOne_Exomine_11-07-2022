@@ -4,7 +4,7 @@ import { Exomine } from "./exomine.js"
 const mainContainer = document.querySelector("#container")
 
 export const render = () => {
-    console.log("refakjbhg uikhgebf")
+    console.log("page is rendering")
     getData.fetchGovernors()
         .then(() => getData.fetchFacilities())
         .then(() => getData.fetchColonyGovernors())
