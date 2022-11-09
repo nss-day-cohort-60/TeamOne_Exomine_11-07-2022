@@ -1,7 +1,6 @@
 //import colonies for local access
 import { getColonies, getColonyGovernors } from "./database.js";
 import {render} from "./main.js"
-//import {disableFacilities} from "./governors.js"
 
 let governorId = null
 

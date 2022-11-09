@@ -6,9 +6,17 @@ let governorId = null
 document.addEventListener("change",
     (event) => {
         if (event.target.id === "governor") {
-            governorId = parseInt(event.target.value)
-            render()
+            governorId = parseInt(event.target.value) 
             Facilities()
+        } 
+    }) 
+
+let facilityId = null
+
+document.addEventListener("change",
+    (event) => {
+        if (event.target.id === "facilities") {
+            facilityId = parseInt(event.target.value)
         } 
     }) 
 
@@ -19,11 +27,15 @@ export const Facilities = () => {
     let html = "<div>Choose a facility</div>"
 
     if (governorId) {
+        if (facilityId) {
+            return selectedFacility()
+        } else {
         html += `<select id="facilities">
         <option value="0">Select a facility...</option>`
         for (const facility of facilities) {
             html += `
             <option value="${facility.id}">${facility.name}</option>`
+        }
         }
     } else {
         html += "Please select a governor"
@@ -33,4 +45,25 @@ export const Facilities = () => {
 
     return html
 
+}
+
+const selectedFacility = () => {
+    let facilities = getFacilities()
+
+    let html = `<select id="facility">
+    <option value="0">Select a facility...</option>`
+
+    for (const facility of facilities) {
+        if (facility.id === facilityId) {
+            html += `
+            <option selected value="${facility.id}">${facility.name}</option>`
+        } else {
+        html += `
+        <option value="${facility.id}">${facility.name}</option>`
+        }
+    }
+
+    html += "</select>"
+
+    return html
 }

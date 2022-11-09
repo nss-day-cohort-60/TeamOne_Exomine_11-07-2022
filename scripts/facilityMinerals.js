@@ -1,6 +1,7 @@
 import { getFacilityMinerals, getMinerals, getFacilities } from "./database.js"
+import { render } from "./main.js"
 
-const facilityId = null
+let facilityId = null
 
 const mainContainer = document.querySelector("#container")
 
@@ -8,10 +9,12 @@ mainContainer.addEventListener("change",
     (event) => {
         if (event.target.id === "facilities") {
             facilityId = parseInt(event.target.value)
+            facilityMinerals()
+            render()
         } 
     }) 
 
-export const facilityMinerals = (facilityId) => {
+export const facilityMinerals = () => {
 
     const facilityMinerals = getFacilityMinerals()
     const minerals = getMinerals()
@@ -23,8 +26,6 @@ export const facilityMinerals = (facilityId) => {
     facilityName: "",
     availableMinerals: []    
    }
- 
-    const facilityName = ""
     
     for (const facility of facilities) {
         if (facility.id === facilityId) {
@@ -49,11 +50,14 @@ export const facilityMinerals = (facilityId) => {
             }
         }
 
-    return `<h2>Facility Minerals for ${facilityName}</h2>
-            ${displayInfo.availableMinerals.map(obj => {
-                return `<input type="radio">${obj.mineralInventory} tons of ${obj.mineralName}`
-            })}
-    `
+        let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>
+        ${displayInfo.availableMinerals.map(obj => {
+            return `<input type="radio">${obj.mineralInventory} tons of ${obj.mineralName}</input>`
+        })}`
+
+        console.log(html)
+    
+        return html
 
 }
 
