@@ -36,25 +36,22 @@
       "id": 1,
       "name": "Earth",
       "governorId": 1,
-      "facilityId": 1
+      
     },
     {
       "id": 2,
       "name": "Planet Vegeta",
       "governorId": 3,
-      "facilityId": 2
     },
     {
       "id": 3,
       "name": "Planet Poopybutthole",
       "governorId": 2,
-      "facilityId": 3
     },
     {
       "id": 4,
       "name": "Namek",
       "governorId": 4,
-      "facilityId": 4
     }
   ],
   "colonyGovernors": [
@@ -248,5 +245,150 @@
       "id": 8
     }
   ],
-  "colonyInventory": []
+  "colonyInventory": [
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    }, 
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+    {
+      "id": 1,
+      "colonyId" : 1,
+      "mineralId": 1,
+      "inventory": 0
+    },
+  ]
 }

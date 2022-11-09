@@ -107,18 +107,33 @@ export const getOrders = () => {
     return applicationState.orders.map(ord => ({...ord}))
 }
 
-export const completeOrder = (orderObj) => {
+export const updateColonyInventory = (orderObj) => {
     const fetchOptions = {
-        method: "POST",
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(orderObj)
     }
 
-    return fetch(`${API}/orders`, fetchOptions)
+    return fetch(`${API}/colonyInventory/${orderObj.id}`, fetchOptions)
         .then(response => response.json())
         .then(() => {
             document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
         })
+}
+
+
+export const fetchColonyInventory = () => {
+    return fetch(`${API}/colonyInventory`)
+        .then(response => response.json())
+        .then(
+            (data) => {
+                applicationState.colonyInventory = data
+            }
+        )
+}
+
+export const getColonyInventory = () => {
+    return applicationState.colonyInventory.map(colInv => ({...colInv}))
 }
