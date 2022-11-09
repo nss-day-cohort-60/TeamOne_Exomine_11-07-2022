@@ -67,3 +67,16 @@ const selectedFacility = () => {
 
     return html
 }
+
+export const selectedFacilityName = () => {
+    let facilities = getFacilities()
+
+    let facilityName = null
+
+    for (const facility of facilities) {
+        if (facility.id === facilityId) {
+            facilityName = `${facility.name}`
+        }
+    }
+    return facilityName
+}

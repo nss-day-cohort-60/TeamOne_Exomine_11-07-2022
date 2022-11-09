@@ -4,7 +4,6 @@ import { Exomine } from "./exomine.js"
 const mainContainer = document.querySelector("#container")
 
 export const render = () => {
-    console.log("page is rendering")
     getData.fetchGovernors()
         .then(() => getData.fetchFacilities())
         .then(() => getData.fetchColonyGovernors())
@@ -20,8 +19,10 @@ export const render = () => {
 }
 
 render()
+console.log("initial render")
 
 mainContainer.addEventListener("stateChanged", 
     customEvent => {
         render()
+        console.log("stateChanged render")
     })

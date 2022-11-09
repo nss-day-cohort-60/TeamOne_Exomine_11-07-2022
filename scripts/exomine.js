@@ -1,7 +1,8 @@
 import {Governors} from "./governors.js"
-import {renderColony} from "./colonies.js"
+import {renderColonyHTML} from "./colonies.js"
 import { facilityMinerals } from "./facilityMinerals.js"
 import { Facilities } from "./facilities.js"
+import { addToCart } from "./orders.js"
 
 export const Exomine = () => {
     let html =  `
@@ -11,10 +12,9 @@ export const Exomine = () => {
                 ${Governors()}
             </section>
             <section class="colonies">
-            ${renderColony()}
+            ${renderColonyHTML()}
             </section>
             <section class="colonyInventory">
-
             </section>
             </div>
 
@@ -26,7 +26,8 @@ export const Exomine = () => {
     ${facilityMinerals()}
     </section>
     <section class="Space Cart">
-            <button id="orderButton">Add to Space Cart</button>
+    ${addToCart()}
+            <button id="orderButton">Purchase Minerals</button>
     </section>
     </div>
     `
