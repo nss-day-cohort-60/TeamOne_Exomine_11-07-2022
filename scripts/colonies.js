@@ -12,10 +12,7 @@ document.addEventListener("change",
         } 
     }) 
 
-
 export const renderColony = () => {
-//json database -> local variable
-
 
 if (governorId) {
     const colonyGovernors = getColonyGovernors()
@@ -39,4 +36,3 @@ if (governorId) {
     return "<h2>Colony Minerals</h2>"
 }
 }
-
