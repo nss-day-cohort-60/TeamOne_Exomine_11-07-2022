@@ -24,13 +24,13 @@ document.addEventListener("change",
 export const Facilities = () => {
     let facilities = getFacilities()
 
-    let html = "<div>Choose a facility</div>"
+    let html = ""
 
     if (governorId) {
         if (facilityId) {
             return selectedFacility()
         } else {
-        html += `<select id="facilities">
+        html += `<div>Choose a facility</div><select id="facilities">
         <option value="0">Select a facility...</option>`
         for (const facility of facilities) {
             html += `
@@ -50,7 +50,7 @@ export const Facilities = () => {
 const selectedFacility = () => {
     let facilities = getFacilities()
 
-    let html = `<select id="facility">
+    let html = `<div>Choose a facility</div><select id="facility">
     <option value="0">Select a facility...</option>`
 
     for (const facility of facilities) {

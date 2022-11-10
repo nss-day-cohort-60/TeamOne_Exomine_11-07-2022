@@ -1,0 +1,61 @@
+.dropdown_colinventory {
+    display: flex;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.shop {
+    display: flex;
+}
+
+.governors {
+    display: flex;
+}
+
+#governor {
+    margin-left: 10px;
+}
+
+.facilityDropdown {
+    display: flex;
+    margin-top: 30px;
+}
+
+#facility {
+    margin-left: 10px;
+}
+
+#facilities{
+    margin-left: 10px;
+}
+
+.colonies {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    text-align: center;
+}
+
+.facilityMinerals {
+    display: flex; 
+    flex-direction: column;
+    width: 600px;
+    text-align: center;
+    border: 1px dotted purple;
+}
+
+.radiobutton {
+    margin: 10px;
+}
+
+.Space_Cart {
+    border: 1px dotted lightskyblue;
+    margin-left: 20px; 
+    text-align: center;
+}
