@@ -47,7 +47,6 @@ const selectedGovernor = () => {
         if (governor.id === governorId) {
             html += `
             <option selected value="${governor.id}">${governor.name}</option>`
-            console.log(html)
         } else {
         html += `
         <option value="${governor.id}">${governor.name}</option>`
@@ -55,8 +54,6 @@ const selectedGovernor = () => {
     }
 
     html += "</select>"
-
-    console.log(html)
 
     return html
 }

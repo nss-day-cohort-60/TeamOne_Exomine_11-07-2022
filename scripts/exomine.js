@@ -3,6 +3,7 @@ import {renderColonyHTML} from "./colonies.js"
 import { facilityMinerals } from "./facilityMinerals.js"
 import { Facilities } from "./facilities.js"
 import { addToCart } from "./orders.js"
+import { colonyInventoryHTML } from "./colonyInventory.js"
 
 export const Exomine = () => {
     let html =  `
@@ -13,6 +14,7 @@ export const Exomine = () => {
             </section>
             <section class="colonies">
             ${renderColonyHTML()}
+            ${colonyInventoryHTML()}
             </section>
             <section class="colonyInventory">
             </section>
