@@ -56,17 +56,13 @@ export const facilityMinerals = () => {
         }
         
 
-            let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>
-        ${displayInfo.availableMinerals.map(obj => {
-            return `<input type="radio" name="mineral" value='${obj.mineralName}' id="mineral--${obj.id}"}>${obj.mineralInventory} tons of ${obj.mineralName}</input>`
-        })}`
+            let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>`
+
+            html +=  `${displayInfo.availableMinerals.map(obj => {
+            return `<div><input class="radiobutton" type="radio" name="mineral" value='${obj.mineralName}' id="mineral--${obj.id}"}>${obj.mineralInventory} tons of ${obj.mineralName}</input></div>`
+            }).join("")}`
     
-        return html
-
-         
-
-
-        
+            return html
 
 }
 

@@ -23,7 +23,7 @@ export const Governors = () => {
     if (governorId) {
         return selectedGovernor()
     } else {
-        let html = `<select id="governor">
+        let html = `<div>Choose a governor</div><select id="governor">
         <option value="0">Select a governor...</option>`
 
         for (const governor of governors) {
@@ -40,7 +40,7 @@ export const Governors = () => {
 const selectedGovernor = () => {
     let governors = getGovernors()
 
-    let html = `<select id="governor">
+    let html = `<div>Choose a governor</div><select id="governor">
     <option value="0">Select a governor...</option>`
 
     for (const governor of governors) {
