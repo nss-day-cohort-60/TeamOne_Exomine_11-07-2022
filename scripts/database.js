@@ -4,7 +4,8 @@ const applicationState = {
     facilities: [], 
     minerals: [],
     facilityMinerals: [],
-    orders: []
+    orders: [],
+    colonyInventory: []
 }
 
 const API = "http://localhost:8088"
@@ -136,4 +137,20 @@ export const fetchColonyInventory = () => {
 
 export const getColonyInventory = () => {
     return applicationState.colonyInventory.map(colInv => ({...colInv}))
+}
+
+export const updateFacilityInventory = (orderObj) => {
+    const fetchOptions = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(orderObj)
+    }
+
+    return fetch(`${API}/facilityMinerals/${orderObj.id}`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+        })
 }

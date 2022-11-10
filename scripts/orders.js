@@ -1,11 +1,7 @@
-import { completeOrder, getFacilities, getOrders } from "./database.js"
+import { getMinerals, updateColonyInventory, getColonies, getColonyInventory, getFacilityMinerals, getFacilities, updateFacilityInventory } from "./database.js"
 import {renderColony} from "./colonies.js"
 import {selectedFacilityName} from "./facilities.js"
 import { render } from "./main.js"
-import { getFacilityMinerals } from "./database.js"
-import { getColonyInventory } from "./database.js"
-import { getColonies } from "./database.js"
-import { getMinerals, updateColonyInventory } from "./database.js"
 
 let objectInCart = false
 let mineral = null
@@ -35,18 +31,20 @@ export const addToCart = () => {
 
 document.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "orderButton"){
-        
+        incColonyInventory()
+        decFacilityInventory()
+        render()
     }
 })
 
 const incColonyInventory = () => {
 
-/*
-id: 1,
-colonyId: 1,
-mineralId: 1,
-inventory: 3
-*/
+    /*
+    id: 1,
+    colonyId: 1,
+    mineralId: 1,
+    inventory: 3
+    */
     let inventory = getColonyInventory()
     const colony = renderColony()
     let colonies =  getColonies()
@@ -72,14 +70,15 @@ inventory: 3
     for (const object of inventory) {
         if (object.colonyId === colonyId){
             if (object.mineralId === mineralId){
-                colonyInventory = object.inventory++
+                colonyInventory = object.inventory
+                colonyInventory++
                  colonyJSONId = object.id
             } 
         }
     }
 
     const colonyObject = {
-        colonyJSONId: colonyJSONId,
+        id: colonyJSONId,
         colonyId: colonyId,
         mineralId: mineralId,
         inventory: colonyInventory
@@ -87,57 +86,52 @@ inventory: 3
 
         updateColonyInventory(colonyObject)
 
-
-
-        
     }
     
     const decFacilityInventory = () => {
-    let inventory = getFacilityMinerals()
-    const facility = selectedFacilityName()
-    let facilities =  getFacilities()
-    let minerals = getMinerals()
-    let facilityId = null
-    let mineralId = null
+       
+        let inventory = getFacilityMinerals()
+        const facility = selectedFacilityName()
+        let facilities =  getFacilities()
+        let minerals = getMinerals()
+        let facilityId = null
+        let mineralId = null
+        let colonyJSONId = null
 
-    for (const fac of facilities ) {
-            if (fac.name === facility) {
-                facilityId = fac.id
+        for (const fac of facilities ) {
+                if (fac.name === facility) {
+                    facilityId = fac.id
+            }
+
         }
-
-    }
-    for ( const thing of minerals) {
-        if (thing.name === mineral) {
-             mineralId = thing.id
-        }
-    }
-
-    let facilityInventory = null
-
-    for (const object of inventory) {
-        if (object.facilityId === facilityId){
-            
-            if (object.mineralId === mineralId){
-                if (object.inventory === 0){
-                    return
-                } else {
-
-                facilityInventory = object.inventory--
-
-                }
-            
-
+        for ( const thing of minerals) {
+            if (thing.name === mineral) {
+                mineralId = thing.id
             }
         }
-    }
 
-    const facilityObject = {
-        facilityId: facilityId,
-        mineralId: mineralId,
-        inventory: facilityInventory
-    }
+        let facilityInventory = null
 
-        updateColonyInventory(colonyObject)
+        for (const object of inventory) {
+            if (object.facilityId === facilityId){
+                if (object.mineralId === mineralId){
+                    if (object.inventory === 0){
+                        return
+                    } else {
+                        facilityInventory = object.inventory
+                        facilityInventory--
+                        colonyJSONId = object.id
+                    }
+                }
+            }
+        }
 
+        const facilityObject = {
+            id: colonyJSONId,
+            facilityId: facilityId,
+            mineralId: mineralId,
+            inventory: facilityInventory
+        }
 
+            updateFacilityInventory(facilityObject)
     }

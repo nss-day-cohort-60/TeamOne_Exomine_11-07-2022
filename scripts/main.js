@@ -11,6 +11,7 @@ export const render = () => {
         .then(() => getData.fetchFacilityMinerals())
         .then(() => getData.fetchMinerals())
         .then(() => getData.fetchOrders())
+        .then(() => getData.fetchColonyInventory())
         .then( 
             () => {
                 mainContainer.innerHTML = Exomine();

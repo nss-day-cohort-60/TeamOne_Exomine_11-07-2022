@@ -55,8 +55,6 @@ export const facilityMinerals = () => {
         ${displayInfo.availableMinerals.map(obj => {
             return `<input type="radio" name="mineral" value='${obj.mineralName}' id="mineral"}>${obj.mineralInventory} tons of ${obj.mineralName}</input>`
         })}`
-
-        console.log(html)
     
         return html
 
