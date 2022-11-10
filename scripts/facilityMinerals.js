@@ -2,6 +2,7 @@ import { getFacilityMinerals, getMinerals, getFacilities } from "./database.js"
 import { render } from "./main.js"
 
 let facilityId = null
+let mineralName = null
 
 const mainContainer = document.querySelector("#container")
 
@@ -14,6 +15,8 @@ mainContainer.addEventListener("change",
             console.log("rendered in facilityMinerals")
         } 
     }) 
+
+
 
 export const facilityMinerals = () => {
 
@@ -43,22 +46,67 @@ export const facilityMinerals = () => {
 
                     const mineralObj = {
                         mineralName: name,
-                        mineralInventory: inventory
+                        mineralInventory: inventory,
+                        id: mineral.id
                     }
 
                     displayInfo.availableMinerals.push(mineralObj)
                 }
             }
         }
+        
 
-        let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>
+            let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>
         ${displayInfo.availableMinerals.map(obj => {
-            return `<input type="radio" name="mineral" value='${obj.mineralName}' id="mineral"}>${obj.mineralInventory} tons of ${obj.mineralName}</input>`
+            return `<input type="radio" name="mineral" value='${obj.mineralName}' id="mineral--${obj.id}"}>${obj.mineralInventory} tons of ${obj.mineralName}</input>`
         })}`
     
         return html
 
+         
+
+
+        
+
 }
+
+/* const selectedMineral = () => {
+    let minerals = getMinerals()
+
+    let html = `<h2>Facility Minerals for ${displayInfo.facilityName}</h2>`
+
+        for (const mineral of minerals) {
+            if (mineral.id === minId) {
+                html += `<input type="radio" name="mineral" value='${mineral.name}' id="mineral" checked>${mineral.mineralInventory} tons of ${mineral.name}</input>`
+            } else {
+                html += `<input type="radio" name="mineral" value='${mineral.name}' id="mineral">${mineral.mineralInventory} tons of ${mineral.name}</input>`
+            }
+        }
+
+    return html        
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 "minerals":[{

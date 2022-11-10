@@ -7,12 +7,29 @@ let objectInCart = false
 let mineral = null
 
 document.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id==="mineral"){
-        objectInCart = true
-        console.log("click event in orders.js")
-        mineral = document.querySelector('input[name="mineral"]').value
-        render()
+
+    const itemClicked = clickEvent.target
+        if (itemClicked.id.startsWith("mineral")) {
+            const [,minId] = itemClicked.id.split("--")
+            let minerals = getMinerals()
+
+             for (const min of minerals ) {
+                if(min.id === parseInt(minId)) {
+                    mineral = min.name
+
+                }
     }
+        objectInCart = true
+        render()
+
+
+        }
+    
+   /*  if(clickEvent.target.id==="mineral"){
+        console.log("click event in orders.js")
+       // mineral = document.querySelector('input[name="mineral"]').value
+        render()
+    } */
 })
 
 
@@ -20,6 +37,7 @@ document.addEventListener("click", clickEvent => {
 
 export const addToCart = () => {
     let cart=""
+
     if(objectInCart){
         cart = `1 ton of ${mineral}<br>`
     }
